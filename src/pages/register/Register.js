@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styles from './register.module.css'
 import { FaEye, FaEyeSlash } from "react-icons/fa"
+import { NavLink } from 'react-router-dom'
 
 const Register = () => {
 
@@ -73,7 +74,7 @@ const Register = () => {
         <FaEye onClick={()=>setShowPassword(true)}/>}
         </span>
         </div>
-        <button type='submit'>Create Account</button>
+        <NavLink to='/'>Create Account</NavLink>
       </form>
       <div className={styles.leftbox}></div>
     </div>
