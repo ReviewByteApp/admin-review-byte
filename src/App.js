@@ -4,6 +4,8 @@ import SideNav from './components/sidenav/SideNav';
 import TopNav from './components/topnav/TopNav';
 import Dashboard from './pages/dashboard/Dashboard';
 import Register from './pages/register/Register';
+import Home from './pages/home/Home';
+import Setting from './pages/setting/Setting';
 
 function App() {
   const {pathname}=useLocation()
@@ -15,6 +17,8 @@ function App() {
       {!shouldHideNavbar && <SideNav/>}
       <Routes>
       <Route element={<Register/>} path='/register'/>
+      <Route element={<Home/>} path='/home'/>
+      <Route element={<Setting/>} path='/setting'/>
       <Route element={<Dashboard/>} path='/'/>
     </Routes>
     </div>

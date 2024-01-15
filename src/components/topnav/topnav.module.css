@@ -4,7 +4,14 @@
     position: fixed;
     top: 0;
     left: 0;
-    color: var(--text-light);
-    background: var(--brand-color);
     z-index: 10;
+    box-shadow: 0 0 1px gray;
+}
+.leftbox{
+    width: 250px;
+    background: var(--brand-color);
+    height: 100%;
+}
+.rightbox{
+    width: calc(100% - 250px);
 }
