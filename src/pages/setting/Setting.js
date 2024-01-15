@@ -109,16 +109,16 @@ const Setting = () => {
           <div className={styles.infoform}>
           <span className={styles.formtitle}>Add photo and video that describe your company.</span>
           <div className={styles.inputbox}>
+            <span>Company Video</span>
+            <input type='file' accept='video/*' onChange={handleVidChange}/>
+            {vidPreview && <video src={vidPreview} controls/>}
+          </div>
+          <div className={styles.inputbox}>
             <span>Company Photo</span>
             <input type='file' accept='image/*' multiple onChange={handlePicChange}/>
               <Swiper navigation={true} modules={[Navigation]} className={styles.myswiper}>
                 {picPreview.map(l=><SwiperSlide><img src={l} alt='logo' className={styles.photopreview}/></SwiperSlide>)}
               </Swiper>
-          </div>
-          <div className={styles.inputbox}>
-            <span>Company Video</span>
-            <input type='file' accept='video/*' onChange={handleVidChange}/>
-            {vidPreview && <video src={vidPreview} controls/>}
           </div>
         </div>
         <div className={styles.savebasic}>
