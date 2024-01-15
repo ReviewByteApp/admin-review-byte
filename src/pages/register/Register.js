@@ -3,7 +3,9 @@ import styles from './register.module.css'
 
 const Register = () => {
   return (
-    <div className={styles.cont}></div>
+    <div className={styles.cont}>
+      
+    </div>
   )
 }
 

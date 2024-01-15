@@ -8,3 +8,10 @@
   position: absolute;
   overflow-x: hidden;
 }
+.nonav{
+  width: calc(100% - 20px);
+  height:calc(100% - 20px);
+  padding: 10px;
+  overflow-x: hidden;
+  background:var(--background-light);
+}
