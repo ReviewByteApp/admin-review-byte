@@ -1,6 +1,7 @@
 :root {
   /* Brand Colors */
-  --brand-color: #022d50;
+  --brand-color: rgb(0,140,255);
+  --brand-color3: #fb6f0a;
   --brand-color2: #008cff53;
   
   /* Background Colors */
