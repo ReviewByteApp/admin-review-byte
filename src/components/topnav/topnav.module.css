@@ -1,0 +1,10 @@
+.cont{
+    width: 100vw;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: var(--text-light);
+    background: var(--brand-color);
+    z-index: 10;
+}

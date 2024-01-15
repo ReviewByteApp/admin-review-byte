@@ -1,3 +1,20 @@
+:root {
+  /* Brand Colors */
+  --brand-color: #022d50;
+  --brand-color2: #008cff53;
+  
+  /* Background Colors */
+  --background-light: rgb(255, 255, 255);
+
+  /* Text Colors */
+  --text-dark: rgb(39, 39, 39);
+  --text-light: rgb(255, 255, 255);
+  
+  /* Error/Alert Colors */
+  --color-error: #da1e28;
+  --color-warning: #FFC107;
+  --color-success: #28A745;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -6,8 +23,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+::-webkit-scrollbar{
+  width: 5px;
+  background: white;
+}
+::-webkit-scrollbar-thumb{
+  background: slategray;
 }

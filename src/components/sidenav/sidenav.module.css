@@ -1,0 +1,11 @@
+.cont{
+    position: fixed;
+    left: 0;
+    top: 80px;
+    width: 250px;
+    height:calc(100vh - 60px);
+    background: var(--brand-color);
+    color: var(--text-light);
+    z-index: 10;
+    box-shadow: 3px 3px 8px gray;
+}
