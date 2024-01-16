@@ -16,7 +16,10 @@ const RviewResult = () => {
     <div className={styles.cont}>
         <div className={styles.title}>
           <span>1-10 of 134 results</span>
+          <div className={styles.options}>
           <select><option>Most Relevant</option><option>Recent</option></select>
+          <select><option>5-star</option><option>4-star</option><option>3-star</option><option>2-star</option><option>1-star</option></select>
+          </div>
         </div>
         <div className={styles.pagination}>
           {pages.map(l=><button onClick={()=>setPageNum(l.page)} style={{background:l.page===pageNum?"var(--brand-color)":"white",color:l.page===pageNum?'white':"var(--brand-color)"}}>{l.page}</button>)}
