@@ -1,5 +1,5 @@
 .cont{
-    width: 100vw;
+    width: 100%;
     height: 60px;
     position: fixed;
     top: 0;
@@ -9,14 +9,17 @@
     display: flex;
 }
 .leftbox{
-    width: 250px;
     background: var(--brand-color);
     height: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
 }
 .rightbox{
     height: 100%;
-    width: calc(100% - 270px);
-    padding: 10px;
+    padding: 0 10px;
     display:flex;
     align-items: center;
     justify-content: space-between;
@@ -24,6 +27,7 @@
 .navname{
     font-size: 30px;
     font-weight: bold;
+    color: var(--brand-color);
 }
 .minnav{
     display: flex;
@@ -31,10 +35,29 @@
     gap: 10px;
 }
 .minnav button{
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     border: 1px solid var(--brand-color);
-    background: rgba(0, 140, 255, 0.747);
-    color: white;
+    color: var(--brand-color);
+    background: transparent;
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
+.minnav button:hover{
+    color: white;
+    background: var(--brand-color);
+}
+@media(max-width:1000px){
+    .leftbox{
+      width: 60px;
+    }
+    .rightbox{
+        justify-content: flex-end;
+    }
+    .navname{
+        display:none;
+    }
+  }

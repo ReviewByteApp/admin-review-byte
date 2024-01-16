@@ -78,3 +78,8 @@
     background: white;
     color: var(--brand-color);
 }
+@media(max-width:1000px){
+    .inputbox{
+      width: 100%;
+    }
+  }

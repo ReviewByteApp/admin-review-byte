@@ -16,7 +16,7 @@ const CompanyIntroInfo = () => {
 
   const handlePicChange = e => {
     const files = e.target.files;
-    const pics = [];
+    const pics = [...picPreview];
     for (let x = 0; x < (files.length); x++) {
       pics.push (URL.createObjectURL (files[x]));
     }
@@ -28,9 +28,10 @@ const CompanyIntroInfo = () => {
   }
 
   function deletePic(e){
-    console.log(e)
-    let newImgs = picPreview.filter((item)=>{return item !== e})
-    setPicPreview(newImgs)
+    if(window.confirm("Are You Sure ,Deleting the photo")){
+      let newImgs = picPreview.filter((item)=>{return item !== e})
+      setPicPreview(newImgs)
+    }
   }
 
   function saveIntroData(e){
