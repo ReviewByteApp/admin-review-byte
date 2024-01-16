@@ -49,6 +49,20 @@
     background: white;
     color: var(--brand-color);
 }
+.activelink{
+    text-decoration: none;
+    background: white;
+    color: var(--brand-color);
+    width: calc(90% - 15px);
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    gap: 5px;
+    height: 30px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding-left: 15px; 
+}
 .icon{
     display: flex;
 }

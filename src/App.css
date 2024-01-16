@@ -17,7 +17,7 @@
   background:var(--background-light);
 }
 .layout{
-  width: 70%;
+  width: 100%;
 }
 @media(max-width:1400px){
   .layout{

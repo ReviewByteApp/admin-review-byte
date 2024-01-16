@@ -1,12 +1,22 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import styles from './topnav.module.css'
 import {useLocation} from 'react-router-dom'
-import { FaArrowRight, FaInfo, FaList, FaMailBulk, FaUser } from 'react-icons/fa'
+import { FaArrowRight, FaTimes, FaRegUser  } from 'react-icons/fa'
 import { SideNavContext } from '../../context/SideNavShow'
+import { CiMenuFries } from "react-icons/ci";
+import { FiMail } from "react-icons/fi";
+import { IoMdHelp } from "react-icons/io";
 
 const TopNav = () => {
   const {pathname}=useLocation()
   const { extendNav,setExtendNav,setShowNav,LessThan1000,LessThan800} = useContext(SideNavContext);
+  const [openMenu,setOpenMenu]=useState()
+
+  const Menus=[
+    {id:1,icon:<IoMdHelp/>,content:<FaArrowRight/>},
+    {id:2,icon:<FiMail/>,content:<FaArrowRight/>},
+    {id:3,icon:<FaRegUser />,content:<FaArrowRight/>},
+  ]
 
   return (
     <div className={styles.cont}>
@@ -22,10 +32,22 @@ const TopNav = () => {
       <div className={styles.rightbox} style={{width:LessThan1000 ?LessThan800?"100%": extendNav?"calc(100% - 270px)":"calc(100% - 80px)":"calc(100% - 270px)"}}>
         <span className={styles.navname}>{pathname.substring(1).toUpperCase()}</span>
         <div className={styles.minnav}>
-          <button><FaInfo/></button>
-          <button><FaMailBulk/></button>
-          <button><FaUser/></button>
-          {LessThan800 && <button><FaList onClick={()=>setShowNav(true)}/></button>}
+          {
+            Menus.map(l=>(
+              <div className={styles.buttoncont} key={l.id}>
+                <button className={styles.infobtn} 
+                onClick={()=>setOpenMenu(l.id)}>{l.icon}
+                </button>
+                <div className={styles.infobox} style={{display:openMenu===l.id?"flex":'none'}}>
+                  <div className={styles.mintitle} onClick={()=>setOpenMenu('')}><FaTimes/></div>
+                  <div className={styles.infoboxcont} >
+                    {l.content}
+                  </div>
+                </div>
+              </div>
+            ))
+          }
+          {LessThan800 && <button className={styles.infobtn}><CiMenuFries onClick={()=>setShowNav(true)}/></button>}
         </div>
       </div>
     </div>

@@ -1,0 +1,47 @@
+.cont{
+    width: 100%;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cont span:nth-child(1){
+    width: 30%;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.cont span:nth-child(2){
+    width: 30%;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.cont span:nth-child(3){
+    width: 20%;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.cont span:nth-child(4){
+    width: 10%;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.cont span:last-child{
+    width: 10%;
+    text-align: center;
+    cursor: pointer;
+    color: var(--brand-color);
+}
+
+@media(max-width:400px){
+    .cont span:nth-child(4){
+        display: none;
+    }
+    }

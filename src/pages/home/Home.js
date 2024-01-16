@@ -4,7 +4,7 @@ import styles from './home.module.css'
 const Home = () => {
   return (
     <div className={styles.cont}>
-      <div className={styles.box}></div>
+      Home
     </div>
   )
 }
