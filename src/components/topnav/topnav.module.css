@@ -6,6 +6,7 @@
     left: 0;
     z-index: 10;
     box-shadow: 0 0 1px gray;
+    display: flex;
 }
 .leftbox{
     width: 250px;
@@ -13,5 +14,27 @@
     height: 100%;
 }
 .rightbox{
-    width: calc(100% - 250px);
+    height: 100%;
+    width: calc(100% - 270px);
+    padding: 10px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navname{
+    font-size: 30px;
+    font-weight: bold;
+}
+.minnav{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.minnav button{
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--brand-color);
+    background: rgba(0, 140, 255, 0.747);
+    color: white;
+    border-radius: 50%;
 }
