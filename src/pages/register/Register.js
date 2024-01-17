@@ -74,7 +74,7 @@ const Register = () => {
         <FaEye onClick={()=>setShowPassword(true)}/>}
         </span>
         </div>
-        <NavLink to='/'>Create Account</NavLink>
+        <NavLink to='/home'>Create Account</NavLink>
       </form>
       <div className={styles.leftbox}></div>
     </div>

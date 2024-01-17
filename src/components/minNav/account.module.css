@@ -1,0 +1,18 @@
+.cont{
+    width: calc(100% - 10px);
+    display: flex;
+    align-items: center;
+    height: 30px;
+    gap: 4px;
+    border-top: 1px solid black;
+    padding: 0 5px;
+    text-decoration: none;
+}
+.cont span{
+    display: flex;
+    align-items: center;
+}
+.cont:hover{
+    background:var(--brand-color);
+    color: white;
+}

@@ -6,6 +6,7 @@ import { SideNavContext } from '../../context/SideNavShow'
 import { CiMenuFries } from "react-icons/ci";
 import { FiMail } from "react-icons/fi";
 import { IoMdHelp } from "react-icons/io";
+import Account from '../minNav/Account'
 
 const TopNav = () => {
   const {pathname}=useLocation()
@@ -15,7 +16,7 @@ const TopNav = () => {
   const Menus=[
     {id:1,icon:<IoMdHelp/>,content:<FaArrowRight/>},
     {id:2,icon:<FiMail/>,content:<FaArrowRight/>},
-    {id:3,icon:<FaRegUser />,content:<FaArrowRight/>},
+    {id:3,icon:<FaRegUser />,content:<Account/>},
   ]
 
   return (

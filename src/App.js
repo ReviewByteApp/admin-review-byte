@@ -11,6 +11,7 @@ import Reviews from './pages/reviews/Reviews';
 import Analysis from './pages/analysis/Analysis';
 import ReviewDetail from './pages/reviewDetail/ReviewDetail';
 import PageNotFound from './pages/404/PageNotFound';
+import Login from './pages/login/login';
 
 function App () {
   const {pathname} = useLocation ();
@@ -22,6 +23,7 @@ function App () {
       {!shouldHideNavbar && <SideNav />}
       <div className="layout">
         <Routes>
+          <Route element={<Login />} path="/" />
           <Route element={<Register />} path="/register" />
           <Route element={<Home />} path="/home" />
           <Route element={<Reviews />} path="/reviews" />
