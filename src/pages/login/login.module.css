@@ -1,85 +1,80 @@
 .cont{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     width: 100vw;
-    background: var(--brand-color3);
-}
-.leftbox{
-    width: calc(100% - 400px);
-    background:var(--brand-color);
     height: 100vh;
 }
-.formbox{
+.logincont{
     width: 400px;
-    height: 100vh;
-    background:white;
+    height: 100%;
+    background: var(--brand-color);
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
 }
-.formbox input{
-    width: 90%;
-    height: 35px;
-    outline: none;
-    padding: 0;
-    border: 1px solid gray;
+.title{
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    width:80%;
+    margin-top: 40px;
 }
-.formbox input:hover{
-    border: 1px solid rgba(0, 140, 255,.4);
+.subtitle{
+    color: white;
+    width:80%;
+    margin-bottom: 20px;
 }
-.formbox input:focus {
-    border: 1px solid var(--brand-color);
+.subtitle a{
+    margin-left: 10px;
+    color: rgb(37, 12, 255);
 }
-.formbox select{
-    width: 90%;
-    height: 35px;
-    outline: none;
-    border: 1px solid gray;
-}
-.formbox select:hover{
-    border: 1px solid rgba(0, 140, 255,.4);
-}
-.formbox select:focus{
-    border: 1px solid var(--brand-color);
-}
-.location{
-    width: 90%;
+.inputbox{
     display: flex;
-    justify-content: space-between;
-}
-.location select{
-    width: 55%;
-}
-.location select:last-child{
-    width: 40%;
-}
-.passbbox{
-    width: 90%;
+    flex-direction: column;
     position: relative;
+    width: 80%;
+    gap: 5px;
+}
+.field{
+    color: white;
+}
+.input{
+    width: calc(100% - 10px);
+    height: 35px;
+    padding: 0 5px;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 1px white;
+    background: transparent;
+    color: white;
+    border-radius: 3px;
+}
+.input:focus{
+    box-shadow: 0 0 2px white;
+}
+.showpass{
+    width: 30px;
+    height: 38px;
+    position: absolute;
+    color: white;
+    right: 0;
+    bottom: 0;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
-.passbbox input{
-    width: calc(100% - 20px);
-    padding: 0 20px 0 0 ;
-    height: 35px;
-}
-.showpassbox{
-    position: absolute;
-    right: 5px;
-
-}
-.formbox button{
-    width: 90%;
-    height: 38px;
-    background: var(--brand-color);
-    border: 1px solid var(--brand-color);
+.forget{
+    width: 80%;
     color: white;
+}
+.logincont button{
+    width:calc(80% + 2px);
+    background: var(--brand-color3);
+    color: white;
+    height: 35px;
+    border: 1px solid var(--brand-color3);
     cursor: pointer;
 }
-.formbox button:hover{
+.logincont button:hover{
+    color: var(--brand-color3);
     background: white;
-    color: var(--brand-color);
 }

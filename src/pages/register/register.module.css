@@ -9,6 +9,11 @@
     width: calc(100% - 400px);
     background:var(--brand-color);
     height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .formbox{
     width: 400px;
@@ -19,30 +24,36 @@
     align-items: center;
     gap: 10px;
 }
+.title{
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--brand-color);
+    width:90%;
+    margin-top: 40px;
+}
+.subtitle{
+    color: var(--brand-color);
+    width:90%;
+    margin-bottom: 20px;
+}
+.subtitle a{
+    margin-left: 10px;
+    color: rgb(37, 12, 255);
+}
 .formbox input{
-    width: 90%;
+    width: calc(90% - 10px);
     height: 35px;
     outline: none;
-    padding: 0;
-    border: 1px solid gray;
-}
-.formbox input:hover{
-    border: 1px solid rgba(0, 140, 255,.4);
-}
-.formbox input:focus {
-    border: 1px solid var(--brand-color);
+    padding: 0 5px;
+    box-shadow: 0 0 1px rgb(0, 0, 0);
+    border: none;
 }
 .formbox select{
     width: 90%;
     height: 35px;
     outline: none;
-    border: 1px solid gray;
-}
-.formbox select:hover{
-    border: 1px solid rgba(0, 140, 255,.4);
-}
-.formbox select:focus{
-    border: 1px solid var(--brand-color);
+    box-shadow: 0 0 1px rgb(0, 0, 0);
+    border: none;
 }
 .location{
     width: 90%;
@@ -62,8 +73,8 @@
     align-items: center;
 }
 .passbbox input{
-    width: calc(100% - 20px);
-    padding: 0 20px 0 0 ;
+    width: calc(100% - 25px);
+    padding: 0 20px 0 5px ;
     height: 35px;
 }
 .showpassbox{

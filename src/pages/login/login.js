@@ -1,33 +1,41 @@
 import React, { useState } from 'react'
 import styles from './login.module.css'
 import { FaEye, FaEyeSlash } from "react-icons/fa"
-import { NavLink } from 'react-router-dom'
+import { NavLink ,useNavigate} from 'react-router-dom'
 
 const Login = () => {
 
   const [showPassword,setShowPassword]=useState(false)
-
+  const navigate=useNavigate()
   const loginFun =async(e)=>{
     e.preventDefault()
-    alert('fuck')
+    alert('fuck you')
+    navigate('/dashboard')
   }
 
   return (
     <div className={styles.cont}>
-      <form className={styles.formbox} onSubmit={loginFun}>
-        <h1>Login</h1>
-        <input type='email' placeholder='Business Email' required/>
-        <div className={styles.passbbox}>
-        <input type={showPassword?'text':'password'} placeholder='Password' minLength={8} required/>
-        <span className={styles.showpassbox}>
-        {showPassword?
-        <FaEyeSlash onClick={()=>setShowPassword(false)}/>:
-        <FaEye onClick={()=>setShowPassword(true)}/>}
-        </span>
+      <form onSubmit={loginFun} className={styles.logincont}>
+        <span className={styles.title}>Login to your Account</span>
+        <span className={styles.subtitle}>Don't have an Account<NavLink to='/register'>Register</NavLink></span>
+        <div className={styles.inputbox}>
+          <span className={styles.field}>Email</span>
+          <input required className={styles.input} maxLength={40} type='email'/>
         </div>
-        <NavLink to='/home'>Login</NavLink>
+        <div className={styles.inputbox}>
+          <span className={styles.field}>Password</span>
+            <input required className={styles.input} maxLength={30} type={showPassword?'text':'password'}/>
+            <span className={styles.showpass}>{showPassword?
+            <FaEyeSlash onClick={()=>setShowPassword(false)}/>
+            :
+            <FaEye onClick={()=>setShowPassword(true)}/>
+            }
+            </span>
+        </div>
+        <span className={styles.forget}>Forgot password</span>
+        <button type='submit'>Login</button>
       </form>
-      <div className={styles.leftbox}></div>
+      <div className={styles.right}></div>
     </div>
   )
 }

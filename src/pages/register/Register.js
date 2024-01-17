@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import styles from './register.module.css'
 import { FaEye, FaEyeSlash } from "react-icons/fa"
-import { NavLink } from 'react-router-dom'
-
+import {NavLink, useNavigate} from 'react-router-dom'
 const Register = () => {
 
   const [showPassword,setShowPassword]=useState(false)
@@ -37,18 +36,21 @@ const Register = () => {
   ]
 
   const [selectedCategory,setSelectedcategory]=useState('')
-  
+  const navigate=useNavigate()
   const createAccount =async(e)=>{
     e.preventDefault()
     alert('fuck')
+    navigate('/home')
+
   }
 
   return (
     <div className={styles.cont}>
       <form className={styles.formbox} onSubmit={createAccount}>
-        <h1>Create Account</h1>
-        <input type='text' placeholder='Business Name' required/>
-        <input type='email' placeholder='Business Email' required/>
+        <span className={styles.title}>Login to your Account</span>
+        <span className={styles.subtitle}>Don't have an Account<NavLink to='/'>Login</NavLink></span>
+        <input type='text' maxLength={30} placeholder='Business Name' required/>
+        <input type='email' maxLength={40} placeholder='Business Email' required/>
         <select onChange={(e)=>setSelectedcategory(e.target.value)}>
           <option hidden>Category</option>
           {categoryData.map(l=><option value={l.id} key={l.id}>{l.name}</option>)}
@@ -67,16 +69,19 @@ const Register = () => {
         </select>
         </div>
         <div className={styles.passbbox}>
-        <input type={showPassword?'text':'password'} placeholder='Password' minLength={8} required/>
+        <input type={showPassword?'text':'password'} placeholder='Password' minLength={8} maxLength={30} required/>
         <span className={styles.showpassbox}>
         {showPassword?
         <FaEyeSlash onClick={()=>setShowPassword(false)}/>:
         <FaEye onClick={()=>setShowPassword(true)}/>}
         </span>
         </div>
-        <NavLink to='/home'>Create Account</NavLink>
+        <button type='submit'>Create Account</button>
       </form>
-      <div className={styles.leftbox}></div>
+      <div className={styles.leftbox}>
+        <h1>Create your free Review Byte account</h1>
+        <span>Start collecting reviews today</span>
+      </div>
     </div>
   )
 }

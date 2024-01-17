@@ -40,7 +40,7 @@
 }
 .infobox{
     position: absolute;
-    width: 300px;
+    width: 200px;
     height: 300px;
     box-shadow: 0 0 2px gray;
     display: flex;
