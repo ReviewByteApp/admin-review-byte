@@ -9,6 +9,8 @@ import Setting from './pages/setting/Setting';
 import Post from './pages/post/Post';
 import Reviews from './pages/reviews/Reviews';
 import Analysis from './pages/analysis/Analysis';
+import ReviewDetail from './pages/reviewDetail/ReviewDetail';
+import PageNotFound from './pages/404/PageNotFound';
 
 function App () {
   const {pathname} = useLocation ();
@@ -23,10 +25,12 @@ function App () {
           <Route element={<Register />} path="/register" />
           <Route element={<Home />} path="/home" />
           <Route element={<Reviews />} path="/reviews" />
+          <Route element={<ReviewDetail />} path="/reviews/:id" />
           <Route element={<Analysis />} path="/analysis" />
           <Route element={<Post />} path="/post" />
           <Route element={<Setting />} path="/setting" />
           <Route element={<Dashboard />} path="/dashboard" />
+          <Route element={<PageNotFound />} path="*" />
         </Routes>
       </div>
     </div>

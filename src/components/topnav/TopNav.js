@@ -30,7 +30,7 @@ const TopNav = () => {
         <span style={{fontSize:'14px',cursor:'pointer'}}>reviewbyte@gmail.com</span>}
       </div>
       <div className={styles.rightbox} style={{width:LessThan1000 ?LessThan800?"100%": extendNav?"calc(100% - 270px)":"calc(100% - 80px)":"calc(100% - 270px)"}}>
-        <span className={styles.navname}>{pathname.substring(1).toUpperCase()}</span>
+        <span className={styles.navname}>{pathname.substring(1).toUpperCase().replace("/",' - ')}</span>
         <div className={styles.minnav}>
           {
             Menus.map(l=>(
